@@ -1,0 +1,128 @@
+/* .zebra {
+  border: 5px dashed black;
+}
+
+.grande {
+  font-size: 30px;
+}
+
+.margen-superior {
+  display: block;
+  margin-top: 45px;
+}
+
+.resaltado{
+  border-bottom: 2px solid brown;
+}
+
+#box {
+  width: 250px;
+  height: 250px;
+  border: 2px solid black;
+  background-color: brown;
+  transition: .5s all;
+} */
+
+/* #box:hover{
+  background-color: darkblue;
+  cursor: pointer;
+} */
+
+/* interface */
+
+/* #datos {
+  border: 2px solid rgb(0, 95, 0);
+  width: 90%;
+  height: 550px;
+  overflow: scroll;
+}
+
+
+.elemento {
+  width: 300px;
+  height: 200px;
+  border: 4px solid black;
+  background: lightblue;
+  margin: 20px;
+  float: left;
+}
+
+.lista-seleccionable li {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid rgb(209, 209, 209);
+  list-style: none;
+  cursor: pointer;
+}
+
+ul .ui-selecting {
+  background-color: rgb(117, 143, 117);
+}
+
+ul .ui-selected {
+  background-color: rgb(11, 78, 11);
+}
+
+#elemento-movil {
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+}
+
+#area {
+  width: 300px;
+  height: 300px;
+  border: 1px solid green;
+}
+
+.caja-efectos {
+  width: 300px;
+  height: 200px;
+  border: 4px solid black;
+  background: lightblue;
+  margin: 20px;
+  float: none;
+  display: none;
+} */
+
+
+/* interface */
+
+/*
+input {
+  padding: 20px;
+  width: 300px;
+  font-size: 20px;
+}
+
+#datos {
+  border: 4px dashed black;
+  padding: 10px;
+  width: 250px;
+  height: 150px;
+  margin: 10px 0;
+  display: none;
+}
+
+#sigueme {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  display: block;
+  background-color: cyan;
+  opacity: 0.5;
+  border-radius: 50%;
+}
+*/
+
+#caja {
+  width: 300px;
+  height: 50px;
+  border-color: black;
+  background-color: #cccccc;
+  text-align: center;
+  line-height: 50px;
+  color: black;
+  font-size: 19px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
