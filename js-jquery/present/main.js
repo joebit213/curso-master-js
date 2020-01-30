@@ -30,7 +30,12 @@ $(document).ready(function() {
 
     var userName = localStorage.getItem('user_name')
     user.html('Bienvenido! ' + `<br>` + userName);
+    if(userName == '') {
+      user.html('Aqui estaria tu nombre.... Si lo tuviera guardado!' + '<br>' + '<img src="https://k61.kn3.net/taringa/8/A/2/9/B/9/vagonettas/EB4.gif>'); 
+    }
 
+
+    //random user
 
     $('#random_user').click(function(){
       $.ajax({
@@ -63,7 +68,7 @@ $(document).ready(function() {
         })
 
     //slector de tema
-    
+
 
 
 })
