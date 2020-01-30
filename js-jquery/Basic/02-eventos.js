@@ -38,7 +38,7 @@ $(document).ready(function(){
 
   nombre.blur(function(){
     $(this).css('border', '1px solid #ccc')
-    datos.text($(this).val())
+    //datos.text($(this).val())
   })
 
   //Mousedown y mouseup
@@ -48,6 +48,17 @@ $(document).ready(function(){
 
   datos.mouseup(function(){
     $(this).css('border-color', 'black')
+  })
+
+
+  //keyup
+
+  nombre.keyup(function(){
+    datos.html(nombre.val())
+
+    if(nombre.val() == '') {
+      datos.html('Escribele...')
+    }
   })
 
   //Mouse move

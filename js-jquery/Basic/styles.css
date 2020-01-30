@@ -1,4 +1,4 @@
-/* .zebra {
+.zebra {
   border: 5px dashed black;
 }
 
@@ -21,7 +21,7 @@
   border: 2px solid black;
   background-color: brown;
   transition: .5s all;
-} */
+}
 
 /* #box:hover{
   background-color: darkblue;
@@ -30,7 +30,7 @@
 
 /* interface */
 
-/* #datos {
+#datos {
   border: 2px solid rgb(0, 95, 0);
   width: 90%;
   height: 550px;
@@ -83,12 +83,12 @@ ul .ui-selected {
   margin: 20px;
   float: none;
   display: none;
-} */
+}
 
 
 /* interface */
 
-/*
+
 input {
   padding: 20px;
   width: 300px;
@@ -113,7 +113,7 @@ input {
   opacity: 0.5;
   border-radius: 50%;
 }
-*/
+
 
 #caja {
   width: 300px;

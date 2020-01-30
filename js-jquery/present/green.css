@@ -1,0 +1,36 @@
+header {
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+body {
+  background-color: rgba(37, 73, 37, 0.438);
+}
+
+#user {
+  text-align: center;
+}
+
+#logo {
+  width: 300px;
+  height: 100px;
+}
+
+#drop {
+  width: 200px;
+  height: 200px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+}
+
+#elem_movil img {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.movil-img {
+  background-color: cadetblue;
+  margin: 10px;
+}
