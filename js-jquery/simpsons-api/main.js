@@ -1,11 +1,14 @@
 $(document).ready(function() {
 
-  let character = $('#other')
+  let character = $('#other'),
+      containerCharacter = $('.loadign-character'),
+      spinner = $('.spinner')
 
   character.click(function() {
     
-    $('.loadign-character').fadeOut()
-    $('.spinner').fadeIn()
+    containerCharacter.fadeOut()
+    spinner.fadeIn()
+
     fetch('https://thesimpsonsquoteapi.glitch.me/quotes')
     .then(response => response.json())
     .then(data => new Promise(resolve => {
@@ -21,12 +24,13 @@ $(document).ready(function() {
         `)
 
         if( data.characterDirection == 'Left') {
-          $('.loadign-character').css('flex-direction', 'row-reverse')
+          containerCharacter.css('flex-direction', 'row-reverse')
         } else {
-          $('.loadign-character').css('flex-direction', 'row')
+          containerCharacter.css('flex-direction', 'row')
         }
-        $('.loadign-character').fadeIn()
-        $('.spinner').fadeOut()
+        
+        containerCharacter.fadeIn()
+        spinner.fadeOut()
       }, 2000);
     }))
     .catch(err => {
