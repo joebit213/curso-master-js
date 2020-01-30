@@ -3,18 +3,19 @@ $(document).ready(function () {
 
   var imgWelcome = 'https://pa1.narvii.com/6566/060e6f22be420c4c84162047ba486f86b7d80ee9_hq.gif'
 
+
+  //User --funcionalidad 
   $('#login').hide();
 
   $('#open_login').click(function () {
     $('#login').slideToggle('nomal', function () { });
-  })
+  });
 
-  //User
   var input = $("#user_input");
   var user = $("#user");
   var welcome = $('#welcome');
 
-  //Evento keyup
+  //Evento keyup -- replica lo que escribes en el input
   input.keyup(function () {
     user.html(input.val());
   });
@@ -26,23 +27,24 @@ $(document).ready(function () {
   } else {
     $('#open_login').hide();
     $('#logout').show();
+    welcome.html('Con logout, se borrara el nombre registrado del localStorage');
     user.html('Bienvenido! ' + userName);
   }
 
   //login falso -- guarda en localstorage
   $('#login form').submit(function (e) {
     e.preventDefault();
-    var userName = $('#user_input').val()
+    var userName = $('#user_input').val();
     localStorage.setItem('user_name', userName);
-  })
+  });
 
-  //logout -- borra el local storage
+  //logout -- borra el localstorage
   $('#logout').click(function () {
     localStorage.clear();
     setTimeout(function () {
       document.location.reload();
     }, 200);
-  })
+  });
 
   var user_save = $('#user_save');
   user_save.click(function () {
@@ -51,7 +53,7 @@ $(document).ready(function () {
       setTimeout(function () {
         $('.login-error').fadeOut();
       }, 2000);
-      
+
     } else {
       $('.main-template').append('<div class="login-succes alert alert-success" role="alert"> <p>Estas dentro!</p> </div>').fadeIn();
       setTimeout(function () {
@@ -60,22 +62,17 @@ $(document).ready(function () {
     }
   })
 
+  //slector de tema
+  var theme = $('#theme');
 
-  //random user
+  $('#to_green').click(function () {
+    theme.attr('href', 'green.css');
+  });
 
-  $('#random_user').click(function () {
-    $.ajax({
-      url: 'https://randomuser.me/api/',
-      dataType: 'json',
-      success: function (data) {
-        console.log(data.results['0']);
-        var datosRandom = data.results['0'];
+  $('#to_default').click(function () {
+    theme.attr('href', 'style.css');
+  });
 
-        $('#random_user_box').append(`<img width="100px" src="${datosRandom.picture.large}" class="img-fluid rounded-circle">`);
-        $('#random_user_box img').addClass('movil-img');
-      }
-    });
-  })
 
   //slick-slider
   $('.slick-slider').slick({
@@ -103,16 +100,38 @@ $(document).ready(function () {
     }
   });
 
-  //slector de tema
-  var theme = $('#theme')
-
-  $('#to_green').click(function(){
-    theme.attr('href', 'green.css')
+  //Traer data
+  $('#random_post').click(function () {
+    $.ajax({
+      url: 'https://jsonplaceholder.typicode.com/posts',
+      dataType: 'json',
+      success: function (data) {
+        data = data.slice(0, 10);
+        //console.log(data);
+        data.forEach((i, index) => {
+          $('#random_posts_box').append(`
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">${i.title}</h5>
+                  <p class="card-text">${i.body}</p>
+                </div>
+              </div>
+          `);
+        });
+      }
+    });
   });
 
-  $('#to_default').click(function(){
-    theme.attr('href', 'style.css')
+
+
+  //footer lista sortable
+  $('.lista-seleccionable').sortable({
+    cursor: "move",
+    update: function(e, ui){
+      console.log('ah cambiado la lista');
+    }
   });
+
 
 
 });
