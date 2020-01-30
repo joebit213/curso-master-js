@@ -6,19 +6,26 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>hello</title>
 
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-
+  <!-- Scripts jquery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="./jquery-ui-1.12.1/jquery-ui.min.js"></script>
 
+  <!-- Scripts slick-slider -->
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- Scripts -->
   <script src="main.js"></script>
 
-  <link rel="stylesheet" href="style.css">
-  <link id="theme_green" rel="stylesheet" href="green.css">
+  <!-- Styles -->
+  <link id="theme" rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="green.css"> -->
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+  <!-- Styles slick-slider -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+  <!-- Styles jquery -->
   <link rel="stylesheet" href="./jquery-ui-1.12.1/jquery-ui.min.css">
   <link rel="stylesheet" href="./jquery-ui-1.12.1/jquery-ui.structure.min.css">
   <link rel="stylesheet" href="./jquery-ui-1.12.1/jquery-ui.theme.min.css">
@@ -27,58 +34,60 @@
 <body>
 
   <div id="color_theme">
-    <button>default</button>
-    <button id="to_green">green</button>
+    <button class="btn btn-outline-secondary" id="to_default">default</button>
+    <button class="btn btn-success" id="to_green">green</button>
   </div>
 
   <header>
     
-    <div>
-      <img id="logo" src="" alt="">
-    </div>
+    <div id="welcome"></div>
 
-    <div id="user"></div>
-
-    <div>
+    <div class="user-login">
       <div>
-        <button id="open_login">Picale</button>
+        <div id="user"></div>
+        <button class="btn btn-info" id="open_login">Login</button>
+        <button class="btn btn-info" id="logout">Logout</button>
       </div>
+
       <div id="login">
-        <form action="">
-          <input type="text" placeholder="Nombre" name="nombre" id="user_input">
-          <button type="submit" id="user_save">Guardar</button>
+        <form>
+          <input class="form-control" aria-label="Large" type="text" placeholder="Nombre" name="nombre" id="user_input">
+          <button class="btn btn-info" id="user_save">Login</button>
         </form>
       </div>
     </div>
 
   </header>
   
-  <div>
+  <div class="main-template">
 
+      <div class="slick-slider">
+        <div><img src="https://media.giphy.com/media/Zt2f45vHLZtaU/giphy.gif" alt=""></div>
+        <div><img src="https://media.giphy.com/media/IMsOH8zBZBD6E/giphy.gif" alt=""></div>
+        <div><img src="https://media.giphy.com/media/DszRJ3yECRuAo/giphy.gif" alt=""></div>
+      </div>
+
+      <div id="elem_movil">
+        <img class="movil-img" src="https://media.giphy.com/media/fxk1hcfyYy9xlPQPZQ/giphy.gif" alt="">
+        <div class="bg-dark text-white">
+          <p>Esta imagen la puedes tomar y moverla por todo el DOM si la depositas en el basurero desaparesera</p>
+        </div>
+      </div>
+
+      <div id="drop">
+        <img src="https://lh5.googleusercontent.com/proxy/KZdMigU6OLdWbzS-2UGvjQ9f1_6UICH0Xdgov1HDijKaxlR7LU6yDHPkSDFIBVJEHdv5h15qXbqR9P6nRzcm2T8sVQ" alt="">
+      </div>
+
+
+      <button class="btn btn-info" id="random_user">Traer usuario random</button>
+      <div id="random_user_box"></div>
+
+  </div>
+
+  <footer>
     <div>
-      <img src="" alt="">
     </div>
-
-  <div>
-
-    <div id="elem_movil">
-      <h3>Tomalo</h3>
-      <img class="movil-img" src="https://media.giphy.com/media/fxk1hcfyYy9xlPQPZQ/giphy.gif" alt="">
-    </div>
-
-
-    <h3>Sueltalo</h3>
-    <div id="drop"></div>
-
-
-    <button id="random_user">Traer usuario random</button>
-    <div id="random_user_box"></div>
-
-  </div>
-
-  </div>
-
-  <footer></footer>
+  </footer>
 
 </body>
 </html>

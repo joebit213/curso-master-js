@@ -1,23 +1,88 @@
+body {
+  background-color: #f8f9fa !important;
+}
+
 header {
-  display:flex;
-  justify-content: space-around;
+  display:flex !important;
+  justify-content: space-between;
+  padding: 10px 80px;
   align-items: center;
+  border-bottom: 1px solid #cccccc;
+  background-color: white;
+}
+
+#welcome {
+  display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+}
+
+#welcome img {
+  width: 250px;
+  height: 100px;
+}
+
+.main-template{
+  margin: 50px 80px;
 }
 
 #user {
   text-align: center;
 }
 
-#logo {
-  width: 300px;
-  height: 100px;
+#login {
+  position: absolute;
+  right: 70px;
+  top: 80px;
+  background-color: teal;
+  padding: 20px;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+#login .btn-info {
+  margin: 5px 0;
+  float: right;
+}
+
+#logout {
+  display: none;
+}
+
+.login-succes {
+  position: absolute !important;
+  top: 1% !important;
+  left: 42% !important;
+}
+
+.login-error {
+  position: absolute !important;
+  top: 1% !important;
+  left: 42% !important;
+}
+
+.user-login {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 #drop {
-  width: 200px;
-  height: 200px;
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  width: fit-content;
   margin: 20px 0;
-  border: 1px solid #ccc;
+}
+
+#drop img {
+  width: 40px;
+}
+
+#elem_movil {
+  margin: 3% 25%;
+  display: flex;
 }
 
 #elem_movil img {
@@ -26,13 +91,25 @@ header {
   cursor: pointer;
 }
 
-.movil-img {
-  background-color: cadetblue;
-  margin: 10px;
+.slick-slider {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-slide img {
+  width: 100%;
+  height: 300px;
 }
 
 #color_theme {
   position: fixed;
   display: flex;
   flex-direction: column;
+  left: 0;
+  top: 44%;
+}
+
+footer {
+  margin: 0 80px;
 }
