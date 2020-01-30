@@ -1,14 +1,11 @@
 $(document).ready(function () {
 
-
-  var imgWelcome = 'https://pa1.narvii.com/6566/060e6f22be420c4c84162047ba486f86b7d80ee9_hq.gif'
-
-
   //User --funcionalidad 
   $('#login').hide();
 
   $('#open_login').click(function () {
-    $('#login').slideToggle('nomal', function () { });
+    // $('#login').slideToggle('normal', function () { });
+    $('#login').slideToggle();
   });
 
   var input = $("#user_input");
@@ -20,9 +17,17 @@ $(document).ready(function () {
     user.html(input.val());
   });
 
+  //login falso -- guarda en localstorage
+  $('#login form').submit(function (e) {
+    e.preventDefault();
+    var userName = $('#user_input').val();
+    localStorage.setItem('user_name', userName);
+  });
+
   //Actualizar el estado de bienvenida
   var userName = localStorage.getItem('user_name');
   if (userName == null) {
+    var imgWelcome = 'https://pa1.narvii.com/6566/060e6f22be420c4c84162047ba486f86b7d80ee9_hq.gif'
     welcome.html('Con login, el nombre que registres se guardara en el localStorage' + `<img src="${imgWelcome}">`);
   } else {
     $('#open_login').hide();
@@ -30,13 +35,6 @@ $(document).ready(function () {
     welcome.html('Con logout, se borrara el nombre registrado del localStorage');
     user.html('Bienvenido! ' + userName);
   }
-
-  //login falso -- guarda en localstorage
-  $('#login form').submit(function (e) {
-    e.preventDefault();
-    var userName = $('#user_input').val();
-    localStorage.setItem('user_name', userName);
-  });
 
   //logout -- borra el localstorage
   $('#logout').click(function () {
@@ -85,6 +83,7 @@ $(document).ready(function () {
   //drag & drop
   var elementoMovil = $('.movil-img');
   var cajaElementos = $('#drop');
+
   elementoMovil.draggable();
 
   cajaElementos.droppable({
@@ -108,7 +107,7 @@ $(document).ready(function () {
       success: function (data) {
         data = data.slice(0, 10);
         //console.log(data);
-        data.forEach((i, index) => {
+        data.forEach((i) => {
           $('#random_posts_box').append(`
               <div class="card" style="width: 18rem;">
                 <div class="card-body">
@@ -122,12 +121,19 @@ $(document).ready(function () {
     });
   });
 
-
-
   //footer lista sortable
   $('.lista-seleccionable').sortable({
     cursor: "move",
-    update: function(e, ui){
+    update: function(){
+
+      var listArray = [];
+      $('li', '.lista-seleccionable').each(function(count) {
+        listArray[count] = $(this).text();
+      });
+
+      var listaOrdenada = listArray.toString();
+      localStorage.setItem('listaOrdenada', listaOrdenada)
+
       console.log('ah cambiado la lista');
     }
   });

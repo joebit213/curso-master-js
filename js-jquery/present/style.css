@@ -12,10 +12,9 @@ header {
 }
 
 #welcome {
-  display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
 }
 
 #welcome img {
@@ -25,7 +24,7 @@ header {
 }
 
 .main-template{
-  margin: 50px 80px;
+  margin: 50px 360px;
 }
 
 #user {
@@ -52,15 +51,24 @@ header {
 }
 
 .login-succes {
-  position: absolute !important;
+  position: fixed !important;
   top: 1% !important;
   left: 42% !important;
+  display: none;
 }
 
 .login-error {
-  position: absolute !important;
+  position: fixed !important;
   top: 1% !important;
   left: 42% !important;
+  display: none;
+}
+
+.fetch-error  {
+  position: fixed !important;
+  top: 1% !important;
+  left: 42% !important;
+  display: none;
 }
 
 .user-login {
@@ -145,4 +153,8 @@ footer {
 .lista-seleccionable li:hover {
   cursor: pointer;
   border: 1px solid #ccc;
+}
+
+.spinner {
+  display: none;
 }

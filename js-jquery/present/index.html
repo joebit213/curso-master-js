@@ -14,7 +14,7 @@
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
   <!-- Scripts -->
-  <script src="main.js"></script>
+  <script src="main-2.js"></script>
 
   <!-- Styles -->
   <link id="theme" rel="stylesheet" href="style.css">
@@ -40,7 +40,10 @@
 
   <header>
     
-    <div id="welcome"></div>
+    <div id="welcome">
+      <p></p>
+      <img src="https://pa1.narvii.com/6566/060e6f22be420c4c84162047ba486f86b7d80ee9_hq.gif" alt="">
+    </div>
 
     <div class="user-login">
       <div>
@@ -59,7 +62,7 @@
 
   </header>
   
-  <div class="main-template">
+  <div class="main-template"> 
 
       <div class="slick-slider">
         <div><img src="https://media.giphy.com/media/Zt2f45vHLZtaU/giphy.gif" alt=""></div>
@@ -79,11 +82,20 @@
       </div>
 
 
-      <div>
+      <div class="text-center">
         <p>Aqui puedes traer data de una API publica mediante ajax</p>
         <button class="btn btn-info" id="random_post">Traer posts</button>
+        <div class="spinner"><img src="https://media.giphy.com/media/3y0oCOkdKKRi0/giphy.gif" alt=""></div>
       </div>
       <div id="random_posts_box"></div>
+
+
+
+      <div class="alertas">
+        <div class="login-error alert alert-danger" role="alert"> <p>Usuario invalido!</p> </div>
+        <div class="login-succes alert alert-success" role="alert"> <p>Estas dentro!</p> </div>
+        <div class="fetch-error alert alert-danger" role="alert"> <p>Lo sentimos... intentalo nuevamente</p> </div>
+      </div>
 
   </div>
 
