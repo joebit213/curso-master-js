@@ -1,0 +1,3 @@
+MAPS
+Los maps listas ordenada que almacenan los valores como llave y valor,
+el tipo de dato que pueden almacenar puede ser de cualquier tipo

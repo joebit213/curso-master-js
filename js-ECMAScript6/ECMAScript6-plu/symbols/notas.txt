@@ -1,0 +1,8 @@
+JavaScript tiene 6 datos primitivos
+.- undefine
+.- null
+.- number
+.- string
+.- symbol
+
+SYMBOL se añadio en ECMA 6 la cual te permite crear propiedades unicas

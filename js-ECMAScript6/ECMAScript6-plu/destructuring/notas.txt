@@ -1,0 +1,4 @@
+------------ Destructuring ------------
+es un codigo que te permite extraer valores de un array u objeto
+Este siempre va a buscar el objeto no importa si hay variables con el mismo nombre
+y estas esten en el scope global, destructuring siempre va a buscar el objeto 

@@ -1,0 +1,4 @@
+Los generadores son una funcion que va a retornar un iterador se indican con un
+asterisco despues de la palabra function
+
+se mandan a llamar como funciones normales pero su retorno es un generador

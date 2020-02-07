@@ -1,0 +1,3 @@
+SETS
+Un set te permite crear una lista de valores
+es similar a un arreglo pero no tiene duplicados si algo es duplicado a lo que ya existe, no se agrega al set
