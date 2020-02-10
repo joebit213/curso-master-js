@@ -1,0 +1,23 @@
+Un mòdulo en programación nos va a permitir agrupar funcionalidad relacionada en un mismo
+archivo, de esta forma, conforme nuestro proyecto crezca, será más fácil de mantener y estará mejor organizado
+
+La ventaja principal de un modulo, es que podemos utilizarlo únicamente donde sea requerido, dejando el resto
+del programa oculto para el resto del código y también re-utilizar código.
+
+BENEFICIOS:
+-dividir el código en pequeños archivos con funcionalidad relacionada.
+-Un módulo puede ser utilizado facilmente en otra aplicación.
+-Dependencias
+-Evita el conflicto con el nombre de las variables
+
+QUE SON LAS DEPENDENCIAS?
+-Un módulo que puede y debe estar conectado con otro módulo, esa relación se conoce como DEPENDENCIAS
+-Si un módulo requiere una pieza de otro módulo, se dice que "depende de ese módulo"
+un ejemplo es Bootstrap, requiere jQuery
+
+Estas evitan el conflicto con el nombre de las variables-
+-la idea de crear módulos también nos ayuda a evitar que si tenemos 2 módulos con la función
+cliente, estos no tengan un conflicto
+Esto es debido a que las funciones serán llamadas como:
+modulo1.cliente()
+modulo2.cliente()
