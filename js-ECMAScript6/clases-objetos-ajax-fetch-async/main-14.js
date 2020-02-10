@@ -8,7 +8,7 @@ async function obtenerClientes() {
         }, 2000)
       })
       //error o no
-      const error = false
+      const error = true
       if(!error) { 
                   //este await va a detener la ejecucion hasta que el promise se haya finalizado
                   //una vez que este termine continuara con el codigo en esta parte
@@ -18,3 +18,8 @@ async function obtenerClientes() {
         await Promise.reject('Hubo un error...')
       }
 }
+
+obtenerClientes()
+  //se lee el resolve con .then()
+  .then(res => console.log(res))
+  .catch(err => console.log(err))
