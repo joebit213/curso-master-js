@@ -1,0 +1,10 @@
+--- Design Patterns o Patrones de Diseño ---
+
+Son soluciones de código re-utilizables que se utilizan en problemas comunes en aplicaciones de 
+Software (o JavaScript).
+
+Cada problema de programación de diferente por lo tanto el patrón puede ser similar pero el código
+siempre es diferente.
+
+Por lo normal en una emprese se emplean patrones de diseño para que todo el código diga el mismo
+lineamiento.
